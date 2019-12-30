@@ -1,0 +1,24 @@
+html{
+    height: 100%;
+}
+body{
+    position:absolute; top:0; bottom:0; right:0; left:0;
+    
+    background: rgb(63,170,154);
+    background: linear-gradient(176deg, rgba(63,170,154,1) 0%, rgb(196, 196, 196) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+header h1{
+    font-family: Tahoma !important;
+    color: white !important;
+    text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.4);
+}
+footer .h5{
+    color: white !important;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+}
+footer .h5 a{
+    color: white !important;
+    text-decoration: underline;
+}
