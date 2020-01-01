@@ -6,15 +6,16 @@ class app {
         this.arr_close = elements.arr_close.value; 
         this.warpper =  elements.warpper.value;
     }
-    make() {
-        let items;
+    getItems(){
         if(this.separator == "\\n"){
-            items = this.text.split(/\n/g);
+            return this.text.split(/\n/g);
         }
         else{
-            items = this.text.replace(/\n/g,"").split(this.separator);
+            return this.text.replace(/\n/g,"").split(this.separator);
         }
-
+    }
+    make() {
+        let items = this.getItems();
         let array_text = this.arr_open; 
         for(let i = 0, l = items.length; i < l; i++){
             array_text += this.warpper + items[i] + this.warpper;
