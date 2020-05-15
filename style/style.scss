@@ -1,0 +1,59 @@
+@import "mixins";
+
+// Colours
+$main-color: #16778C;
+$second-color: #0A3B46;
+$third-color: #fff;
+$black-color: #070707;
+
+
+// Base
+*,
+*::after,
+*::before
+{
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+html{
+    @include xl{
+        font-size: 1.07rem;
+    }
+}
+body{
+    position: relative;
+    box-sizing: border-box;
+    background: linear-gradient($main-color, $second-color);
+    min-height: 100vh;
+    color: $third-color;
+}
+::selection{
+    background-color: $main-color;
+    color: $third-color;
+}
+
+// Utilty
+.h-100vh{
+    height: 100vh;
+}
+.h-min-75vh{
+    min-height: 75vh;
+}
+.border-radius-1{
+    border-radius: 1em;
+}
+
+
+// Components
+.form-control:focus, .btn:focus{
+    outline: none;
+    border-color: $black-color;
+    box-shadow: 0.15rem 0.15rem $black-color;
+}
+.btn{
+    transition: 0.4s;
+}
+.btn:active{
+    transform: scale(0.9);
+}

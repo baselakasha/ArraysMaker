@@ -4,7 +4,7 @@ class app {
         this.separator = elements.separator.value;
         this.arr_open = elements.arr_open.value;
         this.arr_close = elements.arr_close.value; 
-        this.warpper =  elements.warpper.value;
+        this.wrapper =  elements.wrapper.value;
     }
     getItems(){
         if(this.separator == "\\n"){
@@ -18,7 +18,7 @@ class app {
         let items = this.getItems();
         let array_text = this.arr_open; 
         for(let i = 0, l = items.length; i < l; i++){
-            array_text += this.warpper + items[i] + this.warpper;
+            array_text += this.wrapper + items[i] + this.wrapper;
             if(!(i == l - 1)){
                 array_text += ", "
             }
@@ -36,7 +36,7 @@ window.onload=function(){
         separator : document.getElementById("separator"),
         arr_open : document.getElementById("arr_open"),
         arr_close : document.getElementById("arr_close"),
-        warpper : document.getElementById("warpper"),
+        wrapper : document.getElementById("wrapper"),
         btn : document.getElementById("make_btn"),
         output : document.getElementById("array_output"),
         reset : function(){

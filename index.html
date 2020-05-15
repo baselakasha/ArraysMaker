@@ -28,48 +28,68 @@
             gtag('config', 'UA-155174508-2');
         </script>
     </head>
-    <body class="col-11 col-md-7 mx-auto d-flex flex-column sticky-footer-wrapper h-100">
-        <header class="text-center mt-3">
+    <body class="col-11 col-lg-10 mx-auto">
+        <header class="pt-4">
             <h1 class="h1">Arrays Maker</h1>
         </header>
-        <main class="container mx-auto flex-fill">
-            <textarea id="text" class="form-control mx-auto mt-4" rows="9" placeholder="Enter text">Monday&#13;&#10;Tuesday&#13;&#10;Wednesday&#13;&#10;Thursday&#13;&#10;Friday&#13;&#10;Saturday&#13;&#10;Sunday</textarea>
-            <section class="row mx-auto my-4 p-0">
-                <div class="input-group col-12 col-md mx-auto p-0">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text">Text Separator</div>
+        <main>
+            <div class="row p-0 pt-3 pt-lg-5">
+                <div class="col-12 col-lg">
+                    <label class="h2" for="text">Text</label>
+                    <textarea class="form-control mt-3 border-radius-1" name="text" id="text" rows="13" cols="100" >Monday&#13;&#10;Tuesday&#13;&#10;Wednesday&#13;&#10;Thursday&#13;&#10;Friday&#13;&#10;Saturday&#13;&#10;Sunday</textarea>
+                    <!-- Settings inputs -->
+                    <div class="row mt-4">
+                        <!-- Text Separator -->
+                        <div class="col-12 col-lg">
+                            <div class="input-group mx-auto p-0">
+                                <div class="input-group-prepend">
+                                    <label for="separator" class="input-group-text">Text Separator</label>
+                                </div>
+                                <input id="separator" class="form-control" type="text" value="\n"/>
+                            </div>
                         </div>
-                    <input id="separator" class="form-control" type="text" value="\n"/>
-                </div>
-                <div class="input-group col-12 col-md mx-auto p-0 pl-md-3 pt-3 pt-md-0">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text">Array Open</div>
+                        <!-- Item Wrapper -->
+                        <div class="col-12 col-lg pt-3 pt-lg-0">
+                            <div class="input-group mx-auto p-0">
+                                <div class="input-group-prepend">
+                                    <label for="wrapper" class="input-group-text">Item Wrapper</label>
+                                </div>
+                                <input id="wrapper" class="form-control" type="text" value='"'/>
+                            </div>
                         </div>
-                    <input id="arr_open" class="form-control" type="text" value="["/>
-                </div>
-                <div class="input-group col-12 col-md mx-auto p-0 pl-md-3 pt-3 pt-md-0">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text">Array Close</div>
+                    </div>
+                    <div class="row mt-lg-4"> 
+                        <!-- Array open -->
+                        <div class="col-12 col-lg pt-3 pt-lg-0">
+                            <div class="input-group mx-auto p-0">
+                                <div class="input-group-prepend">
+                                    <label for="arr_open" class="input-group-text">Array Open</label>
+                                </div>
+                                <input id="arr_open" class="form-control" type="text" value="["/>
+                            </div>
                         </div>
-                    <input id="arr_close" class="form-control" type="text" value="]"/>
-                </div>
-                <div class="input-group col-12 col-md mx-auto p-0 pl-md-3 pt-3 pt-md-0">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text">Item Warpper</div>
+                        <!-- Array Close -->
+                        <div class="col-12 col-lg pt-3 pt-lg-0">
+                            <div class="input-group mx-auto p-0">
+                                <div class="input-group-prepend">
+                                    <label for="arr_close" class="input-group-text">Array Close</label>
+                                </div>
+                                <input id="arr_close" class="form-control" type="text" value=']'/>
+                            </div>
                         </div>
-                    <input id="warpper" class="form-control" type="text" value='"'/>
-                </div>
-                <button id="make_btn" class="btn btn-success btn-lg mt-4 col-12 mt-4">Make</button>
-            </section>
+                    </div>
 
-            <textarea id="array_output" class="form-control mx-auto" rows="7" readonly="">["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]</textarea>
+                    <button id="make_btn" class="btn btn-lg btn-light border-radius-1 px-5 mt-5">Make</button>
+                </div>
+                <div class="col-12 col-lg pl-lg-5">
+                    <div class="d-flex h-100 flex-column">
+                        <label class="h2" for="array_output">Array</label>
+                        <textarea id="array_output" class="form-control border-radius-1 mt-3 flex-fill" name="array_output" id="" cols="30">["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]</textarea>
+                    </div>
+                    
+                </div>
+            </div>
         </main>
-        <footer class="container row mx-auto px-0 py-2">
-            <div class="col h5"><a href="https://www.baselakasha.com" target="_blank">Basel Akasha</a></div>
-            <a class="col text-right h4" href="https://github.com/baselakasha/ArraysMaker" target="_blank">
-                <svg width="35" height="35" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M896 128q209 0 385.5 103t279.5 279.5 103 385.5q0 251-146.5 451.5t-378.5 277.5q-27 5-40-7t-13-30q0-3 .5-76.5t.5-134.5q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-119-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-85-13.5q-45 113-8 204-79 87-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-39 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 88.5t.5 54.5q0 18-13 30t-40 7q-232-77-378.5-277.5t-146.5-451.5q0-209 103-385.5t279.5-279.5 385.5-103zm-477 1103q3-7-7-12-10-3-13 2-3 7 7 12 9 6 13-2zm31 34q7-5-2-16-10-9-16-3-7 5 2 16 10 10 16 3zm30 45q9-7 0-19-8-13-17-6-9 5 0 18t17 7zm42 42q8-8-4-19-12-12-20-3-9 8 4 19 12 12 20 3zm57 25q3-11-13-16-15-4-19 7t13 15q15 6 19-6zm63 5q0-13-17-11-16 0-16 11 0 13 17 11 16 0 16-11zm58-10q-2-11-18-9-16 3-14 15t18 8 14-14z"/></svg>
-            </a>
-        </footer>
         <script src="script/script.js"></script>
     </body>
 </html>
