@@ -1,24 +1,64 @@
-html{
-    height: 100%;
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  padding: 0;
+  margin: 0;
 }
-body{
-    position:absolute; top:0; bottom:0; right:0; left:0;
-    
-    background: rgb(63,170,154);
-    background: linear-gradient(176deg, rgba(63,170,154,1) 0%, rgb(196, 196, 196) 100%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+
+@media (min-width: 1630px) {
+  html {
+    font-size: 1.07rem;
+  }
 }
-header h1{
-    font-family: Tahoma !important;
-    color: white !important;
-    text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.4);
+
+body {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: -webkit-gradient(linear, left top, left bottom, from(#16778C), to(#0A3B46));
+  background: linear-gradient(#16778C, #0A3B46);
+  min-height: 100vh;
+  color: #fff;
 }
-footer .h5{
-    color: white !important;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+
+::-moz-selection {
+  background-color: #16778C;
+  color: #fff;
 }
-footer .h5 a{
-    color: white !important;
-    text-decoration: underline;
+
+::selection {
+  background-color: #16778C;
+  color: #fff;
 }
+
+.h-100vh {
+  height: 100vh;
+}
+
+.h-min-75vh {
+  min-height: 75vh;
+}
+
+.border-radius-1 {
+  border-radius: 1em;
+}
+
+.form-control:focus, .btn:focus {
+  outline: none;
+  border-color: #070707;
+  -webkit-box-shadow: 0.15rem 0.15rem #070707;
+          box-shadow: 0.15rem 0.15rem #070707;
+}
+
+.btn {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.btn:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+/*# sourceMappingURL=style.css.map */
