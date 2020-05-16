@@ -8,6 +8,7 @@ window.onload=function(){
         arr_open = document.getElementById("arr_open"),
         arr_close = document.getElementById("arr_close"),
         wrapper = document.getElementById("wrapper"),
+        inline_array_check = document.getElementById("inline-array-check"),
         make_btn = document.getElementById("make_btn"),
         output = document.getElementById("array_output");
 
@@ -22,7 +23,7 @@ window.onload=function(){
 
     make_btn.onclick = function(){
         const items_array = splitItems(text_input.value, separator.value); 
-        output.value = makeInlineOutput(items_array, wrapper.value, arr_open.value, arr_close.value);
+        output.value = makeOutput(items_array, wrapper.value, arr_open.value, arr_close.value, inline_array_check.checked);
     };
 }
 
@@ -40,15 +41,16 @@ function splitItems(text, separator){
     }
 }
 
-function makeInlineOutput(items_array, wrapper, array_open, array_close){
-    let output = array_open;
+function makeOutput(items_array, wrapper, array_open, array_close, inline){
+    const new_line = inline ? "" : "\n"; // No newlines if 'inline' is false
+    let output = array_open + new_line;
     for(let item = 0, items_length = items_array.length; item < items_length; item++){
         output += wrapper + items_array[item] + wrapper;
-        if(item != (items_length - 1)){ // Not the last item
-            output += ", "
+        if(item != (items_length - 1)){ // if Not the last item
+            output += ", " + new_line;
         }
         else{
-            output += array_close;
+            output += new_line + array_close;
         }
     }
     return output;
